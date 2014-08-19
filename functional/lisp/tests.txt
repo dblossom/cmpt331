@@ -1,0 +1,142 @@
+Dan Blossom
+Test Cases for Lisp
+
+Break 6 [7]> (encrypter "this is a test string from alan." 8)
+"BPQA QA I BMAB ABZQVO NZWU ITIV."
+Break 6 [7]> (decrypter "bpqa qa i bmab abzqvo nzwu itiv." 8)
+"THIS IS A TEST STRING FROM ALAN."
+
+Break 6 [7]> (encrypter "I was just kidding there is a bond" 777).
+"F TXP GRPQ HFAAFKD QEBOB FP X YLKA"
+
+Break 6 [7]> (decrypter "F TXP GRPQ HFAAFKD QEBOB FP X YLKA" 777).
+"I WAS JUST KIDDING THERE IS A BOND"
+
+Break 6 [7]> (solve "hal" 26).
+Caesar 26: GZK
+Caesar 25: FYJ
+Caesar 24: EXI
+Caesar 23: DWH
+Caesar 22: CVG
+Caesar 21: BUF
+Caesar 20: ATE
+Caesar 19: ZSD
+Caesar 18: YRC
+Caesar 17: XQB
+Caesar 16: WPA
+Caesar 15: VOZ
+Caesar 14: UNY
+Caesar 13: TMX
+Caesar 12: SLW
+Caesar 11: RKV
+Caesar 10: QJU
+Caesar 9: PIT
+Caesar 8: OHS
+Caesar 7: NGR
+Caesar 6: MFQ
+Caesar 5: LEP
+Caesar 4: KDO
+Caesar 3: JCN
+Caesar 2: IBM
+Caesar 1: HAL
+NIL
+
+Break 6 [7]> (solve "ylka" 26).
+Caesar 26: XKJZ
+Caesar 25: WJIY
+Caesar 24: VIHX
+Caesar 23: UHGW
+Caesar 22: TGFV
+Caesar 21: SFEU
+Caesar 20: REDT
+Caesar 19: QDCS
+Caesar 18: PCBR
+Caesar 17: OBAQ
+Caesar 16: NAZP
+Caesar 15: MZYO
+Caesar 14: LYXN
+Caesar 13: KXWM
+Caesar 12: JWVL
+Caesar 11: IVUK
+Caesar 10: HUTJ
+Caesar 9: GTSI
+Caesar 8: FSRH
+Caesar 7: ERQG
+Caesar 6: DQPF
+Caesar 5: CPOE
+Caesar 4: BOND
+Caesar 3: ANMC
+Caesar 2: ZMLB
+Caesar 1: YLKA
+NIL
+Break 6 [7]> 
+
+ ## Does YOLO translate to a real word ##
+Break 6 [7]> (solve "yolo" 26).
+Caesar 26: XNKN
+Caesar 25: WMJM
+Caesar 24: VLIL
+Caesar 23: UKHK
+Caesar 22: TJGJ
+Caesar 21: SIFI
+Caesar 20: RHEH
+Caesar 19: QGDG
+Caesar 18: PFCF
+Caesar 17: OEBE
+Caesar 16: NDAD
+Caesar 15: MCZC
+Caesar 14: LBYB
+Caesar 13: KAXA
+Caesar 12: JZWZ
+Caesar 11: IYVY
+Caesar 10: HXUX
+Caesar 9: GWTW
+Caesar 8: FVSV
+Caesar 7: EURU
+Caesar 6: DTQT
+Caesar 5: CSPS
+Caesar 4: BROR
+Caesar 3: AQNQ
+Caesar 2: ZPMP
+Caesar 1: YOLO
+NIL
+## guess not ##
+
+Break 8 [9]> (encrypter "lisp gives normal people migranes" 759).
+"QNXU LNAJX STWRFQ UJTUQJ RNLWFSJX"
+
+Break 8 [9]> (encrypter "lisp gives normal people migranes" 9).
+"URBY PRENB WXAVJU YNXYUN VRPAJWNB"
+
+Break 9 [10]> (solve "urby" 26).
+Caesar 26: TQAX
+Caesar 25: SPZW
+Caesar 24: ROYV
+Caesar 23: QNXU
+Caesar 22: PMWT
+Caesar 21: OLVS
+Caesar 20: NKUR
+Caesar 19: MJTQ
+Caesar 18: LISP
+Caesar 17: KHRO
+Caesar 16: JGQN
+Caesar 15: IFPM
+Caesar 14: HEOL
+Caesar 13: GDNK
+Caesar 12: FCMJ
+Caesar 11: EBLI
+Caesar 10: DAKH
+Caesar 9: CZJG
+Caesar 8: BYIF
+Caesar 7: AXHE
+Caesar 6: ZWGD
+Caesar 5: YVFC
+Caesar 4: XUEB
+Caesar 3: WTDA
+Caesar 2: VSCZ
+Caesar 1: URBY
+NIL
+
+Break 9 [10]> (decrypter "urby prenb  wxavju ynxyun vrpajwnb" 9).
+"LISP GIVES  NORMAL PEOPLE MIGRANES"
+

@@ -1,0 +1,29 @@
+est completion time 4 hours
+
+30 minutes - remembering haskell :)
+		 - started coming back some, got an incChar function
+		 - working that will give me the number of a char
+		 - + a number specified (IE: 't' + 5 = 121) off to a good start
+           - although, I do look at the code and wonder why it works :/
+
+2 hours    - I remember the pain of functional programming now!
+		 - BUT. While a few bugs, and another needed helper
+           - function - I have decrypt working (assuming I do not
+           - go past z). Think I deserve a restroom break.
+
+30 minutes - got encrypt to work, think rollover support for z to a
+           - is all set.
+
+30 minutes - work on decrypt, which should be the opposite of encrypt so not
+		 - too bad. Got the roll over to work, but thing big numbers will
+		 - break Z to A and small numbers will break A to Z, so need to 
+		 - think of a better roll over solution. Guess I will cheat and
+		 - look at my other assignments roll over math. Otherwise think
+		 - we are done... 30 - 60 minutes more should complete the math
+		 - issue and build some test cases ... (wow almost in my guessed
+		 - time, thought for sure I was going over by alot!) 
+
+4/4(1 hour)- worked on solve, making it print pretty and to specs works fine 
+           - except on the terminal you need to call putStr on the solve method
+           - I suppose that is the interpreter and on a real program it would 
+		 - run fine.

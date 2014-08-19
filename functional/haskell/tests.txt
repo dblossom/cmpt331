@@ -1,0 +1,84 @@
+﻿Prelude> :l cipher.hs
+[1 of 1] Compiling Main             ( cipher.hs, interpreted )
+Ok, modules loaded: Main.
+
+*Main> encrypt "this is a test string from alan." 8
+"BPQA QA I BMAB ABZQVO NZWU ITIV."
+
+*Main> decrypt "bpqa qa i bmab abzqvo nzwu itiv." 8
+"THIS IS A TEST STRING FROM ALAN."
+
+*Main> encrypt "there is no bond!" 007
+"AOLYL PZ UV IVUK!"
+
+*Main> decrypt "aolyl pz uv ivuk" 007
+"THERE IS NO BOND"
+
+*Main> putStr $ solve "aolyl pz uv ivuk" 26
+Caesar 26: ZNKXK OY TU HUTJ
+Caesar 25: YMJWJ NX ST GTSI
+Caesar 24: XLIVI MW RS FSRH
+Caesar 23: WKHUH LV QR ERQG
+Caesar 22: VJGTG KU PQ DQPF
+Caesar 21: UIFSF JT OP CPOE
+Caesar 20: THERE IS NO BOND
+Caesar 19: SGDQD HR MN ANMC
+Caesar 18: RFCPC GQ LM ZMLB
+Caesar 17: QEBOB FP KL YLKA
+Caesar 16: PDANA EO JK XKJZ
+Caesar 15: OCZMZ DN IJ WJIY
+Caesar 14: NBYLY CM HI VIHX
+Caesar 13: MAXKX BL GH UHGW
+Caesar 12: LZWJW AK FG TGFV
+Caesar 11: KYVIV ZJ EF SFEU
+Caesar 10: JXUHU YI DE REDT
+Caesar 9: IWTGT XH CD QDCS
+Caesar 8: HVSFS WG BC PCBR
+Caesar 7: GURER VF AB OBAQ
+Caesar 6: FTQDQ UE ZA NAZP
+Caesar 5: ESPCP TD YZ MZYO
+Caesar 4: DROBO SC XY LYXN
+Caesar 3: CQNAN RB WX KXWM
+Caesar 2: BPMZM QA VW JWVL
+Caesar 1: AOLYL PZ UV IVUK
+
+*Main> encrypt "my last test case secured me an F!" 123
+"FR ETLM MXLM VTLX LXVNKXW FX TG Y!"
+
+*Main> decrypt "fr etlm mxlm vtlx lxvnkxw fx tg y!" 123
+"MY LAST TEST CASE SECURED ME AN F!"
+
+*Main> putStr $ solve "hal" 26
+Caesar 26: GZK
+Caesar 25: FYJ
+Caesar 24: EXI
+Caesar 23: DWH
+Caesar 22: CVG
+Caesar 21: BUF
+Caesar 20: ATE
+Caesar 19: ZSD
+Caesar 18: YRC
+Caesar 17: XQB
+Caesar 16: WPA
+Caesar 15: VOZ
+Caesar 14: UNY
+Caesar 13: TMX
+Caesar 12: SLW
+Caesar 11: RKV
+Caesar 10: QJU
+Caesar 9: PIT
+Caesar 8: OHS
+Caesar 7: NGR
+Caesar 6: MFQ
+Caesar 5: LEP
+Caesar 4: KDO
+Caesar 3: JCN
+Caesar 2: IBM
+Caesar 1: HAL
+
+*Main> encrypt "haskell is my 2nd favorite lang" 4
+"LEWOIPP MW QC 2RH JEZSVMXI PERK"
+*Main> decrypt "lewoipp mw qc 2rh jezsvmxi perk" 4
+"HASKELL IS MY 2ND FAVORITE LANG"
+
+*Main> 

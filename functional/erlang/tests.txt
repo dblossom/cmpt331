@@ -1,0 +1,83 @@
+Eshell V5.10.2  (abort with ^G)
+1> c("cipher.erl").
+{ok,cipher}
+
+2> cipher:encrypt("this is a test string from alan.", 8).
+"BPQA QA I BMAB ABZQVO NZWU ITIV."
+
+4> cipher:decrypt("bpqa qa i bmab abzqvo nzwu itiv.", 8).
+"THIS IS A TEST STRING FROM ALAN."
+
+5> cipher:encrypt("connery", 3477).  
+"VHGGXKR"
+
+6> cipher:solve("vhggxkr", 26).
+Caesar 26: UGFFWJQ
+Caesar 25: TFEEVIP
+Caesar 24: SEDDUHO
+Caesar 23: RDCCTGN
+Caesar 22: QCBBSFM
+Caesar 21: PBAAREL
+Caesar 20: OAZZQDK
+Caesar 19: NZYYPCJ
+Caesar 18: MYXXOBI
+Caesar 17: LXWWNAH
+Caesar 16: KWVVMZG
+Caesar 15: JVUULYF
+Caesar 14: IUTTKXE
+Caesar 13: HTSSJWD
+Caesar 12: GSRRIVC
+Caesar 11: FRQQHUB
+Caesar 10: EQPPGTA
+Caesar 9: DPOOFSZ
+Caesar 8: CONNERY
+Caesar 7: BNMMDQX
+Caesar 6: AMLLCPW
+Caesar 5: ZLKKBOV
+Caesar 4: YKJJANU
+Caesar 3: XJIIZMT
+Caesar 2: WIHHYLS
+Caesar 1: VHGGXKR
+ok
+
+7> cipher:solve("hal", 26).    
+Caesar 26: GZK
+Caesar 25: FYJ
+Caesar 24: EXI
+Caesar 23: DWH
+Caesar 22: CVG
+Caesar 21: BUF
+Caesar 20: ATE
+Caesar 19: ZSD
+Caesar 18: YRC
+Caesar 17: XQB
+Caesar 16: WPA
+Caesar 15: VOZ
+Caesar 14: UNY
+Caesar 13: TMX
+Caesar 12: SLW
+Caesar 11: RKV
+Caesar 10: QJU
+Caesar 9: PIT
+Caesar 8: OHS
+Caesar 7: NGR
+Caesar 6: MFQ
+Caesar 5: LEP
+Caesar 4: KDO
+Caesar 3: JCN
+Caesar 2: IBM
+Caesar 1: HAL
+ok
+
+8> cipher:decrypt("erlang is fun...", 12).
+"SFZOBU WG TIB..."
+
+9> cipher:encrypt("sfzobu wg tib...", 12).
+"ERLANG IS FUN..."
+
+10> cipher:encrypt("theory of programming langs is the best class ever.", -6).     
+"ZNKUXE UL VXUMXGSSOTM RGTMY OY ZNK HKYZ IRGYY KBKX."
+
+11> cipher:decrypt("ZNKUXE UL VXUMXGSSOTM RGTMY OY ZNK HKYZ IRGYY KBKX.", 6). 
+"THEORY OF PROGRAMMING LANGS IS THE BEST CLASS EVER."
+
