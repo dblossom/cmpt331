@@ -1,0 +1,43 @@
+# Dan Blossom
+# Test cases for Cobol
+
+//String to sovlve
+Caesar 026:hal
+Caesar 025:GZK
+Caesar 024:FYJ
+Caesar 023:EXI
+Caesar 022:DWH
+Caesar 021:CVG
+Caesar 020:BUF
+Caesar 019:ATE
+Caesar 018:ZSD
+Caesar 017:YRC
+Caesar 016:XQB
+Caesar 015:WPA
+Caesar 014:VOZ
+Caesar 013:UNY
+Caesar 012:TMX
+Caesar 011:SLW
+Caesar 010:RKV
+Caesar 009:QJU
+Caesar 008:PIT
+Caesar 007:OHS
+Caesar 006:NGR
+Caesar 005:MFQ
+Caesar 004:LEP
+Caesar 003:KDO
+Caesar 002:JCN
+Caesar 001:IBM
+Caesar 000:HAL  
+
+//A few string to encrypt then decrypt     
+//first is the string encrypted second
+//is the string decrypted                                                                                         
+BPQA QA I BMAB ABZQVO NZWU ITIV.                                                                   
+THIS IS A TEST STRING FROM ALAN.
+                                                                   
+BPM JZWEV LWO RCUXML WDMZ BPM TIHG NWF.                                                            
+THE BROWN DOG JUMPED OVER THE LAZY FOX.                                                            
+
+KWJWT UISMA UM EQAP Q RCAB OWB I RWJ IB UKLWVITLA                                                  
+COBOL MAKES ME WISH I JUST GOT A JOB AT MCDONALDS                                                  

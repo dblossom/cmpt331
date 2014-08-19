@@ -1,0 +1,156 @@
+!Author: Dan Blossom
+!
+program Cipher
+
+    IMPLICIT NONE 
+    !Declarations
+	
+	!test stuff
+    CHARACTER(LEN=32) :: input
+    CHARACTER(LEN=3) :: testSolve
+    CHARACTER(LEN=38) :: inputA   
+    CHARACTER(LEN=24) :: inputB
+   
+    testSolve = "hal"
+    input = "This is a test string from Alan!"
+    call encrypt(input, 8)
+    print*, input
+    call decrypt(input, 8)
+    print*, input
+    
+    inputA = "the brown dog jumped over the lazy fox"
+    call encrypt(inputA, 42)
+    print*, inputA
+    call decrypt(inputA, 42)
+    print*, inputA
+    
+    inputB = "Is Connery really Bond ?"
+    call encrypt(inputB, 577)
+    print*, inputB
+    call decrypt(inputB, 577)
+    print*, inputB
+    
+    
+    call solve(testSolve, 26)
+    
+    call solve(inputB, 52)
+    
+end program Cipher
+
+subroutine encrypt(encryptString, shiftAmt)
+    IMPLICIT NONE
+    INTEGER :: shiftAmt
+    INTEGER :: length
+    INTEGER :: pointer
+    INTEGER :: charAscii
+    
+    CHARACTER(LEN=1) :: charValue
+	!incoming string determines length    
+	CHARACTER(LEN=*) :: encryptString
+    
+    length = len_trim(encryptString)
+    pointer = 1
+    call toUpper(encryptString)
+
+	!for the length of string, grab the current char
+	!add it by the shiftAmt and put it back
+    do while(length > 0)
+        charValue = encryptString(pointer:pointer)
+        charAscii = iachar(charValue)
+    	
+		!we do not encrypt non-alpha-chars
+        if((charAscii < 65) .or. (charAscii > 90)) then
+            charAscii = charAscii
+        else		
+            charAscii = charAscii + shiftAmt
+			!rollover support
+            do while(charAscii > 90)
+               charAscii = charAscii - 90
+               charAscii = charAscii + 64
+            end do
+        end if
+
+        charValue = achar(charAscii)
+        encryptString(pointer:pointer) = charValue
+        length = length -1
+        pointer = pointer + 1
+    end do
+end subroutine encrypt
+
+subroutine decrypt(decryptString, shiftAmt)
+    IMPLICIT NONE
+    INTEGER :: shiftAmt
+    INTEGER :: length
+    INTEGER :: pointer
+    INTEGER :: charAscii
+    
+    CHARACTER(LEN=1) :: charValue
+	!incoming string determine length
+    CHARACTER(LEN=*) :: decryptString
+    
+    length = len_trim(decryptString)
+    pointer = 1
+    call toUpper(decryptString)
+	!inc each char in input string by shiftAmt
+    do while(length > 0)
+        charValue = decryptString(pointer:pointer)
+        charAscii = iachar(charValue)
+        if((charAscii < 65) .or. (charAscii > 90)) then
+            charAscii = charAscii
+        else
+            charAscii = charAscii - shiftAmt
+			!rollover support
+            do while(charAscii < 65)
+               charAscii = 65 - charAscii
+               charAscii = 91 - charAscii
+            end do
+        end if
+        charValue = achar(charAscii)
+        decryptString(pointer:pointer) = charValue
+        length = length - 1
+        pointer = pointer + 1
+    end do 
+end subroutine decrypt
+
+subroutine solve(solveString, shiftAmt)
+    IMPLICIT NONE
+    INTEGER :: shiftAmt
+    INTEGER :: i
+	!again, input string determine length    
+	CHARACTER(LEN=*) :: solveString
+    i = shiftAmt
+    do while(i > -1)
+		!print out progress
+        print*, solveString
+		!call decrypt by 1 to shift one char until
+		!the solves shiftAmt is reached.
+        call decrypt(solveString,1)
+        i = i - 1
+    end do
+end subroutine solve
+
+subroutine toUpper(input)
+    IMPLICIT NONE
+    INTEGER :: length
+    INTEGER :: charAscii
+    INTEGER :: pointer   
+    CHARACTER(LEN=1) :: charValue
+    CHARACTER(LEN=*) :: input
+
+    length = LEN_TRIM(input)
+    pointer = 1
+    do while(length > 0)
+        charValue = input(pointer:pointer)
+        charAscii = iachar(charValue)
+		!all we care about is lower case letters to uppercase
+		!so, are we within the lower case range? if so, subtract
+		!by 32 so the uppercase char is found.
+        if(charAscii > 96 .and. charAscii < 123) then
+            charAscii = charAscii - 32
+            charValue = achar(charAscii)
+            input(pointer:pointer) = charValue
+        end if
+        length = length - 1
+        pointer = pointer + 1
+    end do
+end subroutine toUpper
